@@ -85,6 +85,26 @@ FireSaber = LWEParameters(
 #
 #
 
+NEV512 = NTRUParameters(
+    n=512,
+    q=769,
+    Xe=NoiseDistribution.SparseTernary(512, 769 / 16 - 1),
+    Xs=NoiseDistribution.UniformMod(3),
+    m=512,
+    tag="NEV512",
+)
+
+
+
+NEV1024 = NTRUParameters(
+    n=1024,
+    q=769,
+    Xe=NoiseDistribution.SparseTernary(1024, 769 / 16 - 1),
+    Xs=NoiseDistribution.UniformMod(3),
+    m=1024,
+    tag="NEV1024",
+)
+
 NTRUHPS2048509Enc = NTRUParameters(
     n=508,
     q=2048,
